@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 """
-SPARQL Lexer for Pygments
+Quick and dirty SPARQL Lexer for Pygments
 
 It's based on the Turtle Lexer from ``https://github.com/kierdavis/TurtleLexer``.
 
-It is probably incomplete; feel free to contribute.
+It is probably incomplete and even incorrect; feel free to contribute.
 """
 
 from pygments.lexer import RegexLexer, bygroups
