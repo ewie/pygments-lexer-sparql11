@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Quick and dirty SPARQL Lexer for Pygments
+Quick and dirty SPARQL 1.1 Lexer for Pygments
 
 It's based on the Turtle Lexer from ``https://github.com/kierdavis/TurtleLexer``.
 
@@ -14,9 +14,9 @@ from pygments.token import *
 PREFIX = r"[a-zA-Z][-_a-zA-Z0-9]*"
 NAME = r"[_a-zA-Z][-_a-zA-Z0-9]*"
 
-class SparqlLexer(RegexLexer):
-  name = "Sparql"
-  aliases = ["sparql"]
+class Sparql11Lexer(RegexLexer):
+  name = "SPARQL 1.1"
+  aliases = ["sparql11"]
   filenames = ["*.sparql"]
   mimetypes = ["text/x-sparql", "text/sparql", "application/sparql"]
   
@@ -49,6 +49,6 @@ class SparqlLexer(RegexLexer):
   }
 
 def setup(app):
-    """Register SparqlLexer to Sphinx"""
-    sparqlLexer = SparqlLexer()
-    app.add_lexer('sparql', sparqlLexer)
+    """Register Sparql11Lexer to Sphinx"""
+    sparqlLexer = Sparql11Lexer()
+    app.add_lexer('sparql11', sparqlLexer)
